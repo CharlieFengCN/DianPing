@@ -1,0 +1,64 @@
+
+application {
+  config {
+    baseName gatewayService
+    applicationType gateway
+    packageName com.digital.dg
+    authenticationType jwt
+    prodDatabaseType mysql
+    clientFramework vue
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName orderService
+    applicationType microservice
+    packageName com.digital.dg
+    authenticationType jwt
+    prodDatabaseType mysql
+  }
+  entities UserDO,UserDeletionDAO, PassengerDO,UserMailDAO,UserPhoneDO,UserReuseDO
+}
+
+application {
+  config {
+    baseName userService
+    applicationType microservice
+    packageName com.digital.dg
+    authenticationType jwt
+    prodDatabaseType mysql
+  }
+  entities C
+}
+application {
+  config {
+    baseName payService
+    applicationType microservice
+    packageName com.digital.dg
+    authenticationType jwt
+    prodDatabaseType mysql
+  }
+  entities C
+}application {
+  config {
+    baseName ticketService
+    applicationType microservice
+    packageName com.digital.dg
+    authenticationType jwt
+    prodDatabaseType mysql
+  }
+  entities C
+}
+entity A {}
+
+entity B {}
+
+entity C {}
+
+entity D {}
+
+relationship OneToMany {
+  A to B
+}
